@@ -3,6 +3,8 @@ const cartWrapper =document.querySelector('.cart-wrapper');
 window.addEventListener('click', function(event){
     if(event.target.hasAttribute('data-cart')){
 
+
+        
         const card =event.target.closest('.card');
         const productInfo ={
             id: card.dataset.id,
@@ -60,6 +62,8 @@ window.addEventListener('click', function(event){
     card.querySelector('[data-counter]').innerText='0';
 
     toggleCardStatus();
+    calcCartPrice();
+    
 }
    
 });
